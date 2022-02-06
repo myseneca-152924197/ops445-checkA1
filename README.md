@@ -1,9 +1,9 @@
 # Setup
 **First, accept the Assignment Invitation on BB**, then download (clone) Assignment 1 locally, which will allow you to work on your scripts and upload (push) them back up to GitHub.
 
-1. Clone your assignment repository into your ~/ops445/assignment1 directory using SSH:
+1. Clone your assignment repository into your ~/ops445/a1 directory using SSH:
 ```bash
-git clone git@github.com:OPS445-W22/assignment1-yourgithubusername.git ~/ops445/assignment1/
+git clone git@github.com:OPS445-W22/assignment1-yourgithubusername.git ~/ops445/a1/
 ```
 
 # Submission
@@ -11,14 +11,14 @@ git clone git@github.com:OPS445-W22/assignment1-yourgithubusername.git ~/ops445/
 The total marks for the 12 test run is 30 points.  
 Please note that this test run script does not check your script docstring or your function docstring.  
 ```bash
-cd ~/ops445/assignment1/
+cd ~/ops445/a1/
 pwd #confirm that you are in the right directory
 python3 ./CheckA1.py
 ```
 
 2. Paste the testing script output into *a1_output.txt*:
 ```bash
-vi ~/ops445/assignment1/a1_output.txt
+vi ~/ops445/a1/a1_output.txt
 ```
 
 3. Commit and push (upload) your assignment work:
