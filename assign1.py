@@ -4,7 +4,7 @@
 OPS445 Assignment 1 - Winter 2022
 
 Program: assign1.py
-Author: "Student Name" - "Student ID"
+Author: "Ahad Mammadov" - "Student ID"
 
 The python code in this file (assign1.py) is original work written by
 "Student Name". No code in this file is copied from any other source 
@@ -16,7 +16,7 @@ violators will be reported and appropriate action will be taken.
 
 Description: <Enter your documentation here>
 
-Date: 
+Date: 2022-02-06
 '''
 
 def usage():
