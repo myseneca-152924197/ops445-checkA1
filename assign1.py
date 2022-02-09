@@ -4,7 +4,7 @@
 OPS445 Assignment 1 - Winter 2022
 
 Program: assign1.py
-Author: "Ahad Mammadov" - "Student ID"
+Author: "Student Full Name" - "Student ID"
 
 The python code in this file (assign1.py) is original work written by
 "Student Name". No code in this file is copied from any other source 
