@@ -83,7 +83,7 @@ def after(today):
         next_date = str(to_day).zfill(2)+"-"+str(to_month).zfill(2)+"-"+str(year)
         return next_date
 
-def before():
+def before(today):
     "TODO enter docstring."
     pass # TODO replace this with code, using your algorithm document.
 
