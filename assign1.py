@@ -4,7 +4,7 @@
 OPS445 Assignment 1 - Winter 2022
 
 Program: assign1.py
-Author: "Student Full Name" - "Student ID"
+Author: "Ayesha Ghoghari" - "152924197"
 
 The python code in this file (assign1.py) is original work written by
 "Student Name". No code in this file is copied from any other source 
@@ -29,14 +29,44 @@ def days_in_mon(year):
     pass # TODO: delete this line, replace with valid code.
 
 def valid_date(date):
-    "TODO enter docstring"
+    "The after function takes a valid date string in DD-MM-YYYY format and the next day date is returned in the DD-MM-YYYY format"
     # return True or False 
-    pass # TODO: delete this line, replace with valid code.
+    if len(date)! = 10 or date.count("-")! = 2:
+        return "Error: Date entered is wrong"
+    else:
+        str_day, str_month, str_year = date.split('-')
+        try:
+            year = int(str_year)
+            if year < 0:
+                raise ValueError
+        except ValueError:
+            return "Error: Year entered is wrong"
+        try:
+            month = int(str_month)
+            if month > 12 or month < 1:
+                raise ValueError
+        except ValueError:
+            return "Error: Month entered is wrong"
+        try:
+            day = int(str_day)
+            if day > days_in_mon(year)[month] or day < 1:
+                raise ValueError
+        except ValueError:
+            return "Error: Day entered is wrong"
+        return True
+       
 
 def leap_year(year):
     "takes a year in YYYY format, and returns True if it's a leap year, False otherwise."
-    # TODO reorganize code, enter code from after() here.
-    pass # TODO: delete this line, replace with return statement.
+    lyear = year
+    if lyear % 4 == 0:
+        return True
+    elif lyear % 100 == 0:
+        return False
+    elif lyear % 400 == 0:
+        return True
+    else:
+        return False
 
 
 def after(today):
@@ -50,23 +80,9 @@ def after(today):
         month = int(str_month)
         day = int(str_day)
 
-        lyear = year % 4 # TODO: put this into the function leap_year.
-        if lyear == 0:
-            feb_max = 29 # this is a leap year
-        else:
-            feb_max = 28 # this is not a leap year
-
-        lyear = year % 100
-        if lyear == 0:
-            feb_max = 28 # this is not a leap year
-
-        lyear = year % 400
-        if lyear == 0:
-            feb_max = 29 # this is a leap year
-
         tmp_day = day + 1 # next day
 
-        mon_max = { 1:31, 2:feb_max, 3:31, 4:30, 5:31, 6:30, 7:31, 8:31, 9:30, 10:31, 11:30, 12:31}
+        mon_max = days_in_mon(year)
         if tmp_day > mon_max[month]:
             to_day = tmp_day % mon_max[month] # if tmp_day > this month's max, reset to 1
             tmp_month = month + 1
@@ -84,9 +100,8 @@ def after(today):
         return next_date
 
 def before(today):
-    "TODO enter docstring."
-    pass # TODO replace this with code, using your algorithm document.
-
+    "Before function"
+    
 def dbda(start_date, num_days):
     end_date = 0
     # create a loop
